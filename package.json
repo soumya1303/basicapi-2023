@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "node app to create api for following routes GET, POST, PUT, PATCH and DELETE with mongo backend",
+  "main": "app.js",
+  "scripts": {
+    "start":"app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "soumya",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.9.0"
+  }
+}
