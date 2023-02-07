@@ -11,7 +11,6 @@ app.set("view engine", "ejs");
 
 mongoose.set("strictQuery", true);
 //mongoose.connect("mongodb://127.0.0.1:27017/astroDB");
-//mongoose.connect("mongodb://192.168.1.138:27017/astroDB");
 mongoose.connect("mongodb+srv://db-user:password0@cluster0.9sys7.mongodb.net/astroDB?retryWrites=true&w=majority");
 
 const topicSchema = new mongoose.Schema({
@@ -71,6 +70,8 @@ app.route("/topics/:topicId")
 
     const topicName = _.toLower(req.params.topicId);
 
+    console.log("Topic Id:" + topicName);
+
     const option={
         name:topicName
     }
@@ -79,9 +80,12 @@ app.route("/topics/:topicId")
     }
     Topic.find(option, projection, (e, resp)=>{
 
+        console.log(e);
+
         if (e!==null ){
             console.log(e);    
         }else{
+            console.log("Here 1");
             console.log(resp);
             res.send(resp);
         }
