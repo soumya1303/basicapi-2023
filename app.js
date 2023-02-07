@@ -10,7 +10,10 @@ app.use(express.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 
 mongoose.set("strictQuery", true);
-mongoose.connect("mongodb://127.0.0.1:27017/astroDB");
+//mongoose.connect("mongodb://127.0.0.1:27017/astroDB");
+mongoose.connect("mongodb://192.168.1.138:27017/astroDB");
+
+
 
 const topicSchema = new mongoose.Schema({
     name:String,

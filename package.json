@@ -4,7 +4,7 @@
   "description": "node app to create api for following routes GET, POST, PUT, PATCH and DELETE with mongo backend",
   "main": "app.js",
   "scripts": {
-    "start":"app.js",
+    "start":"node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "soumya",
