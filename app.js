@@ -11,9 +11,8 @@ app.set("view engine", "ejs");
 
 mongoose.set("strictQuery", true);
 //mongoose.connect("mongodb://127.0.0.1:27017/astroDB");
-mongoose.connect("mongodb://192.168.1.138:27017/astroDB");
-
-
+//mongoose.connect("mongodb://192.168.1.138:27017/astroDB");
+mongoose.connect("mongodb+srv://db-user:password0@cluster0.9sys7.mongodb.net/astroDB?retryWrites=true&w=majority");
 
 const topicSchema = new mongoose.Schema({
     name:String,
